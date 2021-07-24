@@ -7,7 +7,7 @@ room=[]
 for _ in range(N):
     room.append(list(map(str,input().rstrip())))
 
-print(room)
+#print(room)
 #가로
 row=0
 #세로

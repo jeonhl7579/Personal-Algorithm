@@ -35,11 +35,11 @@ for _ in range(Testcase):
     for i in range(K):
         a,b=map(int,input().split())
         farm[b][a]=1
-    print(farm)
+    #print(farm)
     for i in range(M):
         for j in range(N):
             if farm[j][i]==1:
-                print([j,i])
+                #print([j,i])
                 result.append(bfs(farm,M,N,j,i))
                 
 

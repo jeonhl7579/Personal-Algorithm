@@ -20,6 +20,3 @@ while True:
     if result==N:
         print(cnt)
         break
-
-
-

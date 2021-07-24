@@ -31,4 +31,4 @@ for i in range(N):
         if miro[i][j]==1:
             bfs(i,j)
 print(miro[N-1][M-1])
-print(miro)
+#print(miro)

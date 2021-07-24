@@ -1,7 +1,6 @@
 # 문제 : BOJ2667
 # 내용 : 해결함
 
-
 import sys
 input=sys.stdin.readline
 
