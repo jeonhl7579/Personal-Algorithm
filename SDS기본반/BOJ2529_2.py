@@ -3,39 +3,33 @@ input=sys.stdin.readline
 
 k=int(input())
 sign=input().split()
-visit=[False]*10
 mx,mn='',''
+# 0부터 9까지 숫자들 중에서 사용했는지 체크해주는 배열
+visit=[False]*10
 
-
-# 부등호 체크하는 함수
+# 체크하는 함수
 def check(i,j,k):
-    if k == '<':
-        # 맞으면 True 틀리면 False 반환
+    if k=='<':
         return i<j
-    if k == ">":
+    if k=='>':
         return i>j
-    return True
-
-
+result=[]
+# 백트래킹 함수
 def backtracking(idx,s):
-    global mx,mn
+    global result
+
     if idx==k+1:
-        if not len(mn):
-            mn=s
-        else:
-            mx=s
+        result.append(s)
         return
-    
-    for i in range(10):
+    # 0부터 9까지의 숫자 중에서
+    for i in range(0,10):
+        # 방문하지 않았을 때에
         if not visit[i]:
-            # 처음 시작이거나 check함수의 반환값이 True일때
             if idx==0 or check(s[-1],str(i),sign[idx-1]):
                 visit[i]=True
                 backtracking(idx+1,s+str(i))
                 visit[i]=False
 
 backtracking(0,"")
-print(mx)
-print(mn)
-
-
+print(result[len(result)-1])
+print(result[0])
