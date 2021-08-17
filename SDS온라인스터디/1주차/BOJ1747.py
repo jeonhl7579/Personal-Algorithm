@@ -5,6 +5,7 @@
 #        1003001이 출력되게 해야된다는 것을 간과해서 틀렸던 것 같다.
 
 import sys
+import math
 input=sys.stdin.readline
 
 def main():
@@ -22,7 +23,7 @@ def main():
             if i%2==0:
                 continue
             flag=True
-            for j in range(2,int(i**0.5)+1):
+            for j in range(2,int(math.sqrt(i))+1):
                 if i%j==0:
                     flag=False
                     break
