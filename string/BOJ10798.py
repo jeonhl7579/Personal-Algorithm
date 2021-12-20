@@ -7,7 +7,7 @@ for i in range(5):
     text=list(input().strip())
     for j in range(len(text)):
         book[i][j]=text[j]
-print(book)
+#print(book)
 
 result=''
 for i in range(15):
